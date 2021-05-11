@@ -189,7 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &9885866
 NavMeshAgent:
@@ -342,7 +342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &16150974
 NavMeshAgent:
@@ -495,7 +495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &79146614
 NavMeshAgent:
@@ -648,7 +648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &98102462
 NavMeshAgent:
@@ -1425,7 +1425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &164628302
 NavMeshAgent:
@@ -1578,7 +1578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &170223886
 NavMeshAgent:
@@ -1731,7 +1731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &186745390
 NavMeshAgent:
@@ -1884,7 +1884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &187958629
 NavMeshAgent:
@@ -2037,7 +2037,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &301722042
 NavMeshAgent:
@@ -2190,7 +2190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &311807646
 NavMeshAgent:
@@ -2286,6 +2286,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 320113285}
+  - component: {fileID: 320113286}
   m_Layer: 0
   m_Name: Horde
   m_TagString: Untagged
@@ -2371,13 +2372,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &320113286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320113284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30d174814d1e28546997f51ae93cf84e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombies: []
+  zombiesInHorde: []
+  zombieAgentsInHorde: []
+  destinationUpdateTimer: 0
+  destinationUpdateCooldown: 0
+  Player: {fileID: 0}
 --- !u!43 &323906564
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-44972
+  m_Name: pb_Mesh17332
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2601,7 +2620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &340854204
 NavMeshAgent:
@@ -2694,7 +2713,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-41748
+  m_Name: pb_Mesh17556
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2918,7 +2937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &352492121
 NavMeshAgent:
@@ -3071,7 +3090,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &354480813
 NavMeshAgent:
@@ -3224,7 +3243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &369555150
 NavMeshAgent:
@@ -3347,7 +3366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &413613365
 NavMeshAgent:
@@ -3530,7 +3549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &432637272
 NavMeshAgent:
@@ -3995,7 +4014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &454954215
 NavMeshAgent:
@@ -4148,7 +4167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &490076668
 NavMeshAgent:
@@ -4301,7 +4320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &549090272
 NavMeshAgent:
@@ -4454,7 +4473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &612991536
 NavMeshAgent:
@@ -4547,7 +4566,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-41332
+  m_Name: pb_Mesh17950
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4819,7 +4838,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &672604088
 NavMeshAgent:
@@ -4972,7 +4991,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &774448811
 NavMeshAgent:
@@ -5125,7 +5144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &800589168
 NavMeshAgent:
@@ -5278,7 +5297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &807881773
 NavMeshAgent:
@@ -5431,7 +5450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &808799172
 NavMeshAgent:
@@ -5584,7 +5603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &824963502
 NavMeshAgent:
@@ -5737,7 +5756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &830544204
 NavMeshAgent:
@@ -5890,7 +5909,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &861670483
 NavMeshAgent:
@@ -6043,7 +6062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &862451583
 NavMeshAgent:
@@ -6196,7 +6215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &863154938
 NavMeshAgent:
@@ -6349,7 +6368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &873110271
 NavMeshAgent:
@@ -6502,7 +6521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &882089720
 NavMeshAgent:
@@ -6595,7 +6614,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-22432
+  m_Name: pb_Mesh18160
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6819,7 +6838,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &941342560
 NavMeshAgent:
@@ -6912,7 +6931,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-42786
+  m_Name: pb_Mesh17978
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7076,7 +7095,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-44034
+  m_Name: pb_Mesh17344
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7300,7 +7319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &1016397582
 NavMeshAgent:
@@ -7453,7 +7472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &1028511688
 NavMeshAgent:
@@ -7606,7 +7625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &1064197805
 NavMeshAgent:
@@ -7759,7 +7778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &1104533436
 NavMeshAgent:
@@ -7912,7 +7931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &1114526325
 NavMeshAgent:
@@ -8065,7 +8084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &1121558743
 NavMeshAgent:
@@ -8530,7 +8549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &1157934620
 NavMeshAgent:
@@ -8995,7 +9014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &1188205425
 NavMeshAgent:
@@ -9148,7 +9167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &1248718696
 NavMeshAgent:
@@ -9301,7 +9320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &1256060351
 NavMeshAgent:
@@ -9454,7 +9473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &1282416675
 NavMeshAgent:
@@ -9607,7 +9626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &1317814757
 NavMeshAgent:
@@ -9760,7 +9779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &1345751848
 NavMeshAgent:
@@ -9913,7 +9932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &1358028668
 NavMeshAgent:
@@ -10510,7 +10529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &1489310942
 NavMeshAgent:
@@ -10663,7 +10682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &1509315553
 NavMeshAgent:
@@ -11128,7 +11147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &1675055150
 NavMeshAgent:
@@ -11455,7 +11474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &1725323567
 NavMeshAgent:
@@ -11608,7 +11627,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &1805073239
 NavMeshAgent:
@@ -11761,7 +11780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &1840656112
 NavMeshAgent:
@@ -11854,7 +11873,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-44692
+  m_Name: pb_Mesh18102
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12078,7 +12097,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &1908648203
 NavMeshAgent:
@@ -12231,7 +12250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &1934872956
 NavMeshAgent:
@@ -12384,7 +12403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &1937352893
 NavMeshAgent:
@@ -12537,7 +12556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &2003802416
 NavMeshAgent:
@@ -12727,7 +12746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &2016569099
 NavMeshAgent:
@@ -12880,7 +12899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &2019913505
 NavMeshAgent:
@@ -13033,7 +13052,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &2066876359
 NavMeshAgent:
@@ -13186,7 +13205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &2071385750
 NavMeshAgent:
@@ -13339,7 +13358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &2082088628
 NavMeshAgent:
@@ -13492,7 +13511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &2112503527
 NavMeshAgent:
@@ -13737,7 +13756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1441963456}
   navMeshAgent: {fileID: 0}
-  changeDestinationCooldown: 2
+  changeDestinationCooldown: 0
   originalCooldown: 0
 --- !u!195 &2143934978
 NavMeshAgent:
