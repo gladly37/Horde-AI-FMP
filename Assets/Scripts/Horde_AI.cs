@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
 public class Horde_AI : MonoBehaviour
 {
     public List<GameObject> zombies = new List<GameObject>();
@@ -34,10 +35,15 @@ public class Horde_AI : MonoBehaviour
         destinationUpdateTimer -= Time.deltaTime;
         if (destinationUpdateTimer <= 0)
         {
-           /** foreach(NavMeshAgent zombieAgent in zombieAgentsInHorde)
+            Vector3 playerLocation = GetPlayerLoc(Player);
+            Transform playerTransform = Player.transform;
+            Debug.Log(playerTransform.right);
+            foreach(NavMeshAgent zombieAgent in zombieAgentsInHorde)
             {
+                //Vector3 destinationNearPlayer = new Vector3(playerTransform.right + Random.Range(-5f, 5f), playerTransform.position.y, playerTransform.forward + Random.Range()
                 SetNewDestination(zombieAgent, GetPlayerLoc(Player));
-            } **/
+            }
+            destinationUpdateTimer = destinationUpdateCooldown + Random.Range(-0.5f, 0.5f);
         }
     }
 
