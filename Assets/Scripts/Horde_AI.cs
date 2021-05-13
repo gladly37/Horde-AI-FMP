@@ -32,7 +32,7 @@ public class Horde_AI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        destinationUpdateTimer -= Time.deltaTime;
+        /**destinationUpdateTimer -= Time.deltaTime;
         if (destinationUpdateTimer <= 0)
         {
             Vector3 playerLocation = GetPlayerLoc(Player);
@@ -41,15 +41,16 @@ public class Horde_AI : MonoBehaviour
             foreach(NavMeshAgent zombieAgent in zombieAgentsInHorde)
             {
                 //Vector3 destinationNearPlayer = new Vector3(playerTransform.right + Random.Range(-5f, 5f), playerTransform.position.y, playerTransform.forward + Random.Range()
-                SetNewDestination(zombieAgent, GetPlayerLoc(Player));
+                SetNewDestination(zombieAgent);
             }
             destinationUpdateTimer = destinationUpdateCooldown + Random.Range(-0.5f, 0.5f);
-        }
+        } **/
     }
 
-    public void SetNewDestination(NavMeshAgent agent, Vector3 playerLoc)
+    public void SetNewDestination(NavMeshAgent agent)
     {
-        agent.SetDestination(playerLoc);
+        Vector3 desiredLoc = Player.transform.position + Player.transform.forward * Random.Range(1, 5f) + Player.transform.right * Random.Range(-5f, 5f);
+        agent.SetDestination(desiredLoc);
     }
 
     public Vector3 GetPlayerLoc(GameObject player)
