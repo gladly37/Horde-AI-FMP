@@ -16,6 +16,7 @@ public class FirstPersonController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
+        this.gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
 
     private void Update()
