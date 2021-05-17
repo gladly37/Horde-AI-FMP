@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class ObstacleScript : MonoBehaviour
 {
-    public bool playerTouched = false;
+    public bool activated = false;
     public float obstacleTranslateMultiplier = 1;
     public float obstacleScaleMultiplier;
     // Start is called before the first frame update
@@ -22,15 +22,20 @@ public class ObstacleScript : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.tag == "Player")
+        /**if (collision.collider.tag == "Player")
         {
-            if (!playerTouched)
+            if (!activated)
             {
-                playerTouched = true;
-                CreateNavMeshObstacle();
-                gameObject.AddComponent<Rigidbody>();
+                
             }
-        }
+        }**/
+    }
+
+    public void Activate()
+    {
+        activated = true;
+        CreateNavMeshObstacle();
+        gameObject.AddComponent<Rigidbody>();
     }
 
     void CreateNavMeshObstacle()

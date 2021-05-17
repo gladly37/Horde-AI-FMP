@@ -19,8 +19,10 @@ public class TrapZombies : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.name);
         if (other.GetComponent<NavMeshAgent>() != null)
         {
+            Debug.Log("zombie trapped");
             other.GetComponent<NavMeshAgent>().enabled = false;
             other.GetComponent<Rigidbody>().isKinematic = false;
         }
