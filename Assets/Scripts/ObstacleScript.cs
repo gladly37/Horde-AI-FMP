@@ -7,6 +7,7 @@ public class ObstacleScript : MonoBehaviour
 {
     public bool playerTouched = false;
     public float obstacleTranslateMultiplier = 1;
+    public float obstacleScaleMultiplier;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,12 +35,14 @@ public class ObstacleScript : MonoBehaviour
 
     void CreateNavMeshObstacle()
     {
+
         GameObject newObstacle = gameObject;
         GameObject spawnedNewObstacle = Instantiate(newObstacle, transform);
-        Destroy(spawnedNewObstacle.GetComponent<MeshCollider>());
+        spawnedNewObstacle.GetComponent<MeshCollider>().isTrigger = true;
         spawnedNewObstacle.GetComponent<MeshRenderer>().enabled = false;
         spawnedNewObstacle.transform.position = spawnedNewObstacle.transform.parent.position + Vector3.up * obstacleTranslateMultiplier;
-        
         spawnedNewObstacle.transform.parent = null;
+        //spawnedNewObstacle.transform.localScale = new Vector3(transform.localScale.x / obstacleScaleMultiplier, transform.localScale.y / obstacleScaleMultiplier, transform.localScale.z / obstacleScaleMultiplier); -- changing its scale also changes its position, for some reason.
+        spawnedNewObstacle.AddComponent<TrapZombies>();
     }
 }
