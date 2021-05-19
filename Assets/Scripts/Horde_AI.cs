@@ -12,6 +12,7 @@ public class Horde_AI : MonoBehaviour
     public float destinationUpdateTimer;
     public float destinationUpdateCooldown;
     public GameObject Player;
+    public Transform PlayerTransform;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,7 @@ public class Horde_AI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PlayerTransform = Player.transform;
         /**destinationUpdateTimer -= Time.deltaTime;
         if (destinationUpdateTimer <= 0)
         {
@@ -49,7 +51,7 @@ public class Horde_AI : MonoBehaviour
 
     public void SetNewDestination(NavMeshAgent agent)
     {
-        Vector3 desiredLoc = Player.transform.position + Player.transform.forward * Random.Range(1, 5f) + Player.transform.right * Random.Range(-5f, 5f);
+        Vector3 desiredLoc = PlayerTransform.position + PlayerTransform.forward * Random.Range(1, 5f) + PlayerTransform.right * Random.Range(-5f, 5f);
         agent.SetDestination(desiredLoc);
     }
 
