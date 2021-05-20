@@ -14,6 +14,7 @@ public class Horde_AI : MonoBehaviour
     public float destinationUpdateCooldown;
     public float HordeSpeed;
     public float HordeSpeedRandomRange;
+    public float HordeAttackRange;
     public GameObject Player;
     public Transform PlayerTransform;
 
@@ -41,6 +42,11 @@ public class Horde_AI : MonoBehaviour
         {
             zombieAgent.speed = HordeSpeed + Random.Range(HordeSpeedRandomRange * -1f, HordeSpeedRandomRange);
         }
+
+        foreach (Zombie_AI zombieAI in zombieScriptsInHorde)
+        {
+            zombieAI.attackRange = HordeAttackRange;
+        }
     }
 
     // Update is called once per frame
@@ -64,7 +70,7 @@ public class Horde_AI : MonoBehaviour
 
     public void SetNewDestination(NavMeshAgent agent)
     {
-        Vector3 desiredLoc = PlayerTransform.position + PlayerTransform.forward * Random.Range(1, 5f) + PlayerTransform.right * Random.Range(-5f, 5f);
+        Vector3 desiredLoc = PlayerTransform.position + PlayerTransform.forward * Random.Range(1, 2f) + PlayerTransform.right * Random.Range(-3.5f, 3.5f);
         agent.SetDestination(desiredLoc);
     }
 

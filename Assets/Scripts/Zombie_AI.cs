@@ -13,7 +13,8 @@ public class Zombie_AI : MonoBehaviour
     public bool isActive = false;
     public bool isDead = false;
     public Animator animator;
-    
+    public float attackRange;
+    public GameObject Player;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class Zombie_AI : MonoBehaviour
         personalResetTimer = personalResetCooldown;
         animator = GetComponent<Animator>();
         animator.speed = Random.Range(0.85f, 1.15f);
+        Player = HordeAI.Player;
     }
 
     // Update is called once per frame
@@ -50,6 +52,12 @@ public class Zombie_AI : MonoBehaviour
             animator.SetBool("ZombieIsDead", true);
         }
 
-        
+        if (Vector3.Distance(Player.transform.position, transform.position) < attackRange)
+        {
+            if (personalResetTimer < 0.1)
+            {
+                animator.SetTrigger("ZombieAttack");
+            }
+        }
     }
 }
