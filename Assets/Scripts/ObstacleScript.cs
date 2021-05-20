@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class ObstacleScript : MonoBehaviour
 {
     public bool activated = false;
+    public bool canBeActivatedByPlayer = false;
     public float obstacleTranslateMultiplier = 1;
     public float obstacleScaleMultiplier;
     // Start is called before the first frame update
@@ -22,13 +23,10 @@ public class ObstacleScript : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        /**if (collision.collider.tag == "Player")
+        if (collision.collider.tag == "Player" && canBeActivatedByPlayer && !activated)
         {
-            if (!activated)
-            {
-                
-            }
-        }**/
+            Activate();
+        }
     }
 
     public void Activate()

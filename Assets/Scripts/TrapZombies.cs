@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class TrapZombies : MonoBehaviour
 {
+    
     // Start is called before the first frame update
     void Start()
     {

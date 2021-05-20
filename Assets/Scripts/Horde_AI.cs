@@ -9,8 +9,11 @@ public class Horde_AI : MonoBehaviour
     public List<GameObject> zombies = new List<GameObject>();
     public GameObject[] zombiesInHorde;
     public NavMeshAgent[] zombieAgentsInHorde;
+    public Zombie_AI[] zombieScriptsInHorde;
     public float destinationUpdateTimer;
     public float destinationUpdateCooldown;
+    public float HordeSpeed;
+    public float HordeSpeedRandomRange;
     public GameObject Player;
     public Transform PlayerTransform;
 
@@ -27,6 +30,16 @@ public class Horde_AI : MonoBehaviour
         for (int i = 0; i < zombiesInHorde.Length; i++)
         {
             zombieAgentsInHorde[i] = zombiesInHorde[i].GetComponent<NavMeshAgent>();
+        }
+        zombieScriptsInHorde = new Zombie_AI[zombiesInHorde.Length];
+        for (int i = 0; i < zombiesInHorde.Length; i++)
+        {
+            zombieScriptsInHorde[i] = zombiesInHorde[i].GetComponent<Zombie_AI>();
+        }
+
+        foreach (NavMeshAgent zombieAgent in zombieAgentsInHorde)
+        {
+            zombieAgent.speed = HordeSpeed + Random.Range(HordeSpeedRandomRange * -1f, HordeSpeedRandomRange);
         }
     }
 
@@ -58,5 +71,13 @@ public class Horde_AI : MonoBehaviour
     public Vector3 GetPlayerLoc(GameObject player)
     {
         return player.transform.position;
+    }
+
+    public void SetHordeActive()
+    {
+        foreach (Zombie_AI zombie in zombieScriptsInHorde)
+        {
+            zombie.isActive = true;
+        }
     }
 }

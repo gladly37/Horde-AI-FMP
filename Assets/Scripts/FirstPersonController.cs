@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
 
+
 public class FirstPersonController : MonoBehaviour
 {
     public float speed;
     public float jumpForce;
     public GameObject playerCam;
     public Rigidbody rb;
+    public Light flashlight;
     public bool isGrounded;
     Vector3 movementVector = new Vector3(0, 0, 0);
     // Start is called before the first frame update
@@ -26,9 +28,15 @@ public class FirstPersonController : MonoBehaviour
 
         Jump();
 
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            flashlight.enabled = !flashlight.isActiveAndEnabled; 
+        }
         //transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
         //playerCam.transform.position = transform.position + Vector3.up/2;
     }
+
+
 
     private void FixedUpdate()
     {

@@ -24,5 +24,11 @@ public class StreetlightInteraction : MonoBehaviour
             gameObject.AddComponent<Rigidbody>();
             activated = true;
         }
+
+        if (collision.gameObject.tag == "Zombie" && !activated)
+        {
+            gameObject.AddComponent<Rigidbody>();
+            activated = true;
+        }
     }
 }

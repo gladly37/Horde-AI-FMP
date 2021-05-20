@@ -13,6 +13,7 @@ public class Zombie_AI : MonoBehaviour
     public bool isActive = false;
     public bool isDead = false;
     public Animator animator;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class Zombie_AI : MonoBehaviour
         ZombieAgent = GetComponent<NavMeshAgent>();
         personalResetTimer = personalResetCooldown;
         animator = GetComponent<Animator>();
+        animator.speed = Random.Range(0.85f, 1.15f);
     }
 
     // Update is called once per frame

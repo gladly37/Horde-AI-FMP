@@ -7,6 +7,7 @@ TagManager:
   - Jumpable
   - CarIgniter
   - Explodeable
+  - Zombie
   layers:
   - Default
   - TransparentFX
